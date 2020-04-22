@@ -1,0 +1,15 @@
+# SEE: https://github.com/tmuxinator/tmuxinator
+name: tailwind_css_1_3_4_rails_demo
+root: ~/tailwind_css_1_3_4_rails_demo
+
+on_project_start: lsof -t -i tcp:3000 | xargs kill -KILL; lsof -t -i tcp:3035 | xargs kill -KILL;
+pre_window: asdf local ruby 2.6.6; asdf local nodejs 13.11.0;
+
+windows:
+  - editor: nvim
+  - console: bundle exec rails c
+  - server:
+      layout: main-vertical
+      panes:
+        - bundle exec rails s
+        - bundle exec ./bin/webpack-dev-server
