@@ -9,7 +9,7 @@ I created this demo using the following:
 - Ruby 2.7.1
 - Node 13.11.0
 - Rails 6.0.2.1
-- Webpacker 5.0.1
+- Webpacker 5.1.1
 - TailwindCSS 1.3.4
 - psql (PostgreSQL) 12.1
 
